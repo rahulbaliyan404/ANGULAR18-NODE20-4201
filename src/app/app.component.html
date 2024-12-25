@@ -1,0 +1,33 @@
+<div>
+  <h4 style="color: blue;">***Interpolation one way bindings "component to view" Start *****</h4>
+  <h5>Display component value to view :::::: {{ title}}</h5>
+  <h5>Support arithmetic operator :::::: {{ 10 + 20}}, {{15 * 2}}, {{50 - 20}}, {{60/2}}</h5>
+  <h5>Support ternory operator :::: {{status ? "on":"off"}}</h5>
+  <h5>Method value display in view ::::: {{interpolationMethod()}}</h5>
+  <h4 style="color: blue;">***Interpolation one way bindings End *****</h4>
+</div>
+<div>
+  <h4 style="color: green;">***Property binding one way bindings "component to view"Start *****</h4>
+  <h5><input type="text" value="Angular " [disabled]="false"></h5>
+  <h5><input type="text" value="Angular " disabled="false"></h5>
+  <h5><input type="text" [value]="inputTypeValue"></h5>
+  <h5><input type="text" [value]="!inputTypeValue2"></h5>
+  <h5><input type="text" bind-value="inputTypeValue"></h5>
+  <h5><input type="text" value="Hidden value " [hidden]="hiddenValue"></h5>
+  <h5><input type="text" value="Hidden value " bind-hidden="hiddenValue2"></h5>
+  <h5><input type="text" value="checkStatus ? status5 : status6"></h5>
+  <h4 style="color: green;">***Property binding one way bindings End *****</h4>
+</div>
+<div>
+  <h4 style="color: blueviolet">***Event binding one way bindings "View to Component"Start *****</h4>
+  <h5><button (click)="clickEvent()">Click Event</button></h5>
+  <p>{{message}}</p>
+  <h5><button value ="This is button value" (click)="onClickEvent($event)">Click $Event</button></h5>
+  <div>
+    <h5><button style="color: aquamarine;" value ="Laptop" (click)="onClickEvent1($event)">Click $Event</button></h5>
+    <h5><button style="color: aquamarine;" value ="TV" (click)="onClickEvent1($event)">Click $Event</button></h5>
+    <h5><button style="color: aquamarine;" value ="Mobile" (click)="onClickEvent1($event)">Click $Event</button></h5>
+  </div>
+  <h4 style="color: blueviolet;">***Event binding one way bindings End *****</h4>
+</div>
+<router-outlet />
